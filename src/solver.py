@@ -1,6 +1,4 @@
 # standard library imports
-import os
-from pathlib import Path
 from typing import List, Set
 
 # third party imports
