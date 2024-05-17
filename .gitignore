@@ -164,3 +164,7 @@ cython_debug/
 
 # Notebooks
 *.ipynb
+
+# Test screenshots
+example_1.png
+example_2.png

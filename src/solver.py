@@ -2,7 +2,6 @@
 from typing import List, Set
 
 # third party imports
-import numpy as np
 
 # local imports
 
@@ -12,9 +11,9 @@ class LinkedInQueensSolver:
     Class to brute force the daily LinkedIn Queens game
     """
 
-    def __init__(self, board: np.ndarray) -> None:
+    def __init__(self, board: List[List[str]]) -> None:
         self.board = board
-        self.board_size = board.shape[0]
+        self.board_size = len(board)
         self.solution = []
 
     def __get_solutions(self, arr: List[int], seen_colors: Set) -> None:
