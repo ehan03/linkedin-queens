@@ -22,8 +22,8 @@ def main() -> None:
     extractor = GridExtractor()
     monitor = {
         "top": 0,
-        "left": WINDOW_WIDTH // 4,
-        "width": WINDOW_WIDTH // 2,
+        "left": 0,
+        "width": WINDOW_WIDTH,
         "height": WINDOW_HEIGHT,
     }
 
