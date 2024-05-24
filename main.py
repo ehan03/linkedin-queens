@@ -1,6 +1,8 @@
 # standard library imports
+import os
 import sys
 
+os.system("")
 sys.path.append(".")
 
 # third party imports
@@ -11,6 +13,7 @@ from mss import mss
 # local imports
 from src import GridExtractor, LinkedInQueensSolver
 from src.constants import WINDOW_HEIGHT, WINDOW_WIDTH
+from src.utils import print_board
 
 
 def main() -> None:
@@ -39,18 +42,22 @@ def main() -> None:
         top_offset=monitor["top"], left_offset=monitor["left"]
     )
     if not colors and not centers:
-        print(
-            "Black pixels found in cell centers. Did you already solve the puzzle? Exiting..."
-        )
+        print("Black pixels found in cell centers. Did you already solve the puzzle?")
     else:
+        print("Detected game board:")
+        print_board(colors=colors)
+
         solver = LinkedInQueensSolver(colors)
         solution = solver.solve()
+
+        print("Solution:")
+        print_board(colors=colors, solution=solution)
 
         for idx, row in zip(solution, centers):
             target_coords = row[idx]
             pyautogui.click(x=target_coords["x"], y=target_coords["y"], clicks=2)
 
-        print("Puzzle solved. Go flex your inhuman speed on LinkedIn now.")
+        print("Puzzle solved!")
 
 
 if __name__ == "__main__":

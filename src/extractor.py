@@ -110,13 +110,13 @@ class GridExtractor:
                     }
                 )
 
-                r, g, b, _ = self.cropped[cY, cX]
-                hex = f"#{r:02x}{g:02x}{b:02x}"
+                b, g, r, _ = self.cropped[cY, cX]
+                rgb = f"{r},{g},{b}"
 
-                if hex == "#000000":
+                if rgb == "0,0,0":
                     return [], []
 
-                colors.append(hex)
+                colors.append(rgb)
 
         colors = np.array(colors).reshape(N, N).tolist()
         centers = np.array(centers).reshape(N, N).tolist()

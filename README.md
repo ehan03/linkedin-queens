@@ -1,6 +1,6 @@
 # linkedin-queens
 
-Dumb program to automatically solve the LinkedIn Queens game using `opencv-python` for game board detection, `pyautogui` for mouse control, and a simple backtracking algorithm to solve the puzzle.
+A silly program to automatically solve the LinkedIn Queens game using `opencv-python` for game board detection, `pyautogui` for mouse control, and a simple backtracking algorithm to solve the puzzle.
 
 ![](img/demo.gif)
 
@@ -29,3 +29,5 @@ I don't plan on working on this project anymore, but I'll happily accept pull re
 - Better support for Dark Mode
 - Support for people using WSL; there is a known issue with the `mss` library in that it isn't able to capture the Windows desktop and can only communicate with Linux processes
 - Test the program on different browsers and make it browser-agnostic if there are any issues
+- Figure out how to make the program stop flagging other windows like the terminal as the game board
+- Better error handling, logging, detecting if the puzzle has already been solved, etc.
