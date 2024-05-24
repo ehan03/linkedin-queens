@@ -21,3 +21,10 @@ Dumb program to automatically solve the LinkedIn Queens game using `opencv-pytho
 5. Navigate to the [Queens game page](https://www.linkedin.com/games/queens/) while the program is running and start the game. The program should automatically solve the puzzle for you and exit once it has completed the game.
 
 *The program was tested on Google Chrome. It may work on other browsers, but this is not guaranteed.
+
+## Future Work
+
+I don't plan on working on this project anymore, but I'll happily accept pull requests. Some potential improvements include:
+- Support for different screen resolutions, maybe through multi-scale template matching or something more clever and robust
+- Better support for Dark Mode
+- Support for people using WSL; there is a known issue with the `mss` library in that it isn't able to capture the Windows desktop and can only communicate with Linux processes
