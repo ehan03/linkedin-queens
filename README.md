@@ -28,3 +28,4 @@ I don't plan on working on this project anymore, but I'll happily accept pull re
 - Support for different screen resolutions, maybe through multi-scale template matching or something more clever and robust
 - Better support for Dark Mode
 - Support for people using WSL; there is a known issue with the `mss` library in that it isn't able to capture the Windows desktop and can only communicate with Linux processes
+- Test the program on different browsers and make it browser-agnostic if there are any issues
