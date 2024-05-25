@@ -4,6 +4,9 @@ A silly program to automatically solve the LinkedIn Queens game using `opencv-py
 
 ![](img/demo.gif)
 
+NEW: Console logging
+![](img/logging.png)
+
 ## Setup
 
 1. Clone the repository and navigate to the project folder.
