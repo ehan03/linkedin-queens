@@ -1,6 +1,6 @@
 # linkedin-queens
 
-A silly program to automatically solve the LinkedIn Queens game using `opencv-python` for game board detection, `pyautogui` for mouse control, and a simple backtracking algorithm to solve the puzzle.
+Program to automatically solve the LinkedIn Queens game using `opencv-python` for game board detection, `pyautogui` for mouse control, and a simple backtracking algorithm to solve the puzzle.
 
 ![](img/demo.gif)
 <p align="center">
