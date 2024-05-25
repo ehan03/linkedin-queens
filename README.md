@@ -3,9 +3,17 @@
 A silly program to automatically solve the LinkedIn Queens game using `opencv-python` for game board detection, `pyautogui` for mouse control, and a simple backtracking algorithm to solve the puzzle.
 
 ![](img/demo.gif)
+<p align="center">
+    Demonstration of the program in action. The program automatically detects the game board, finds the solution, clicks in the correct squares, and exits. This all happens in 1-2 seconds.
+</p>
 
-NEW: Console logging
+<br/>
+<br/>
+
 ![](img/logging.png)
+<p align="center">
+    For debugging purposes, the program prints out the detected game board and the solution it found to the console, preserving LinkedIn's original colors and making it easy to tell if the program is working correctly.
+</p>
 
 ## Setup
 
