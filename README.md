@@ -2,6 +2,7 @@
 
 Program to automatically solve the LinkedIn Queens game using `mss` for taking screenshots, `opencv-python` for game board detection, `pyautogui` for mouse control, `sty` for color in console outputs, and a simple backtracking algorithm to solve the puzzle.
 
+https://github.com/ehan03/linkedin-queens/blob/main/demo.mp4
 
 ## Setup
 
