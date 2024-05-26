@@ -6,6 +6,7 @@ os.system("")
 sys.path.append(".")
 
 # third party imports
+import cv2 as cv
 import numpy as np
 import pyautogui
 from mss import mss
@@ -21,6 +22,7 @@ def main() -> None:
     Main function
     """
 
+    start_template = cv.imread("img/template_start.png", cv.IMREAD_UNCHANGED)
     extractor = GridExtractor()
     monitor = {
         "top": 0,
@@ -31,9 +33,23 @@ def main() -> None:
 
     with mss() as sct:
         while True:
-            image = sct.grab(monitor)
-            image = np.array(image)
-            is_present = extractor.check_template(image)
+            start_image = sct.grab(monitor)
+            start_image = np.array(start_image)
+            result = cv.matchTemplate(start_image, start_template, cv.TM_CCOEFF_NORMED)
+            _, maxVal, _, maxLoc = cv.minMaxLoc(result)
+
+            if maxVal > 0.99:
+                print("Found 'Start game' button.\n")
+                start_button_x = maxLoc[0] + start_template.shape[1] // 2
+                start_button_y = maxLoc[1] + start_template.shape[0] // 2
+                pyautogui.click(x=start_button_x, y=start_button_y)
+                break
+
+        while True:
+            pyautogui.hotkey("ctrl", "home")
+            game_image = sct.grab(monitor)
+            game_image = np.array(game_image)
+            is_present = extractor.check_template(game_image)
 
             if is_present:
                 break

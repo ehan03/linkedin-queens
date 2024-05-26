@@ -9,7 +9,7 @@ from sty import bg, fg
 
 def print_board(colors: List[List[str]], solution: Optional[List[int]] = None) -> None:
     N = len(colors)
-    sep = "\n" + "+---" * N + "+\n"
+    sep = "+---" * N + "+\n"
     board = sep
 
     if solution:
@@ -23,13 +23,13 @@ def print_board(colors: List[List[str]], solution: Optional[List[int]] = None) -
                     )
                 else:
                     board_row += bg(r, g, b) + "   " + bg.rs + "|"
-            board += board_row + sep
+            board += board_row + "\n" + sep
     else:
         for row in colors:
             board_row = "|"
             for cell in row:
                 r, g, b = [int(x) for x in cell.split(",")]
                 board_row += bg(r, g, b) + "   " + bg.rs + "|"
-            board += board_row + sep
+            board += board_row + "\n" + sep
 
-    print(board + "\n")
+    print(board)

@@ -20,7 +20,7 @@ class GridExtractor:
     def __init__(
         self,
         template_path: str = os.path.join(
-            os.path.dirname(__file__), "..", "img", "template.png"
+            os.path.dirname(__file__), "..", "img", "template_game_board.png"
         ),
     ) -> None:
         """
